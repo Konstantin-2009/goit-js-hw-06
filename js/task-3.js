@@ -6,10 +6,28 @@
 //     padEnd(str) — отримує параметр str (рядок) і додає його в кінець значення приватної властивості value об'єкта, який викликає цей метод.
 //     padStart(str) — отримує параметр str (рядок) і додає його на початок значення приватної властивості value об'єкта, який викликає цей метод.
 //     padBoth(str) — отримує параметр str (рядок) і додає його на початок і в кінець значення приватної властивості value об'єкта, який викликає цей метод
+
 class StringBuilder {
-  #initialValue;
-  constructor;
+  #value;
+  constructor(value) {
+    this.#value = value;
+  }
+
+  getValue() {
+    return this.#value;
+  }
+
+  padEnd(str) {
+    this.#value = str;
+  }
+  padStart(str) {
+    this.#value = str;
+  }
+  padBoth(str) {
+    this.#value = str;
+  }
 }
+
 const builder = new StringBuilder('.');
 console.log(builder.getValue()); // "."
 builder.padStart('^');
